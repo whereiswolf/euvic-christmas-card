@@ -1,52 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="generator" content="Astro v1.7.2">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/euvic-christmas-card/favicon.svg"
+    />
+    <meta name="generator" content="Astro v1.7.2" />
     <title>Wesołych Świąt!</title>
-    <meta property="og:title" content="Wesołych Świąt!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://whereiswolf.github.io/euvic-christmas-card/">
-    <meta property="og:image" content="/euvic-christmas-card/image.png">
-    <meta property="og:locale" content="pl_PL">
-  <link rel="stylesheet" href="/euvic-christmas-card/assets/index.069cd1a7.css" /><script type="module">function W(r){const w=r&&r.emoji||["\u{1F600}","\u{1F602}","\u{1F606}","\u{1F60A}"];let d=r&&r.element,n=d||document.body,a=window.innerWidth,u=window.innerHeight;const s={x:a/2,y:a/2},m={x:a/2,y:a/2};let x=0;const l=[],f=[];let e,h,y;const v=window.matchMedia("(prefers-reduced-motion: reduce)");v.onchange=()=>{v.matches?B():E()};function E(){if(v.matches)return console.log("This browser has prefers reduced motion turned on, so the cursor did not init"),!1;e=document.createElement("canvas"),h=e.getContext("2d"),e.style.zIndex=500,e.style.top="0px",e.style.left="0px",e.style.pointerEvents="none",d?(e.style.position="absolute",n.appendChild(e),e.width=n.clientWidth,e.height=n.clientHeight):(e.style.position="fixed",document.body.appendChild(e),e.width=a,e.height=u),h.font="21px serif",h.textBaseline="middle",h.textAlign="center",w.forEach(t=>{let i=h.measureText(t),o=document.createElement("canvas"),c=o.getContext("2d");o.width=i.width,o.height=i.actualBoundingBoxAscent*2,c.textAlign="center",c.font="21px serif",c.textBaseline="middle",c.fillText(t,o.width/2,i.actualBoundingBoxAscent),f.push(o)}),S(),b()}function S(){n.addEventListener("mousemove",F,{passive:!0}),n.addEventListener("touchmove",p,{passive:!0}),n.addEventListener("touchstart",p,{passive:!0}),window.addEventListener("resize",M)}function M(t){a=window.innerWidth,u=window.innerHeight,d?(e.width=n.clientWidth,e.height=n.clientHeight):(e.width=a,e.height=u)}function p(t){if(t.touches.length>0)for(let i=0;i<t.touches.length;i++)L(t.touches[i].clientX,t.touches[i].clientY,f[Math.floor(Math.random()*f.length)])}function F(t){t.timeStamp-x<16||window.requestAnimationFrame(()=>{if(d){const o=n.getBoundingClientRect();s.x=t.clientX-o.left,s.y=t.clientY-o.top}else s.x=t.clientX,s.y=t.clientY;Math.hypot(s.x-m.x,s.y-m.y)>1&&(L(s.x,s.y,f[Math.floor(Math.random()*w.length)]),m.x=s.x,m.y=s.y,x=t.timeStamp)})}function L(t,i,o){l.push(new A(t,i,o))}function C(){h.clearRect(0,0,a,u);for(let t=0;t<l.length;t++)l[t].update(h);for(let t=l.length-1;t>=0;t--)l[t].lifeSpan<0&&l.splice(t,1)}function b(){C(),y=requestAnimationFrame(b)}function B(){e.remove(),cancelAnimationFrame(y),n.removeEventListener("mousemove",F),n.removeEventListener("touchmove",p),n.removeEventListener("touchstart",p),window.addEventListener("resize",M)}function A(t,i,o){const c=Math.floor(Math.random()*60+80);this.initialLifeSpan=c,this.lifeSpan=c,this.velocity={x:(Math.random()<.5?-1:1)*(Math.random()/2),y:Math.random()*.4+.8},this.position={x:t,y:i},this.canv=o,this.update=function(P){this.position.x+=this.velocity.x,this.position.y+=this.velocity.y,this.lifeSpan--,this.velocity.y+=.05;const g=Math.max(this.lifeSpan/this.initialLifeSpan,0);P.drawImage(this.canv,this.position.x-this.canv.width/2*g,this.position.y-this.canv.height/2,this.canv.width*g,this.canv.height*g)}}return E(),{destroy:B}}new W({emoji:["\u{1F381}","\u{1F384}","\u{1F31F}","\u2744\uFE0F","\u2603\uFE0F"]});
-</script></head>
+    <meta property="og:title" content="Wesołych Świąt!" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://whereiswolf.github.io/euvic-christmas-card/"
+    />
+    <meta property="og:image" content="/euvic-christmas-card/image.png" />
+    <meta property="og:locale" content="pl_PL" />
+    <link
+      rel="stylesheet"
+      href="/euvic-christmas-card/assets/index.069cd1a7.css"
+    />
+    <script type="module">
+      function W(r) {
+        const w = (r && r.emoji) || [
+          '\u{1F600}',
+          '\u{1F602}',
+          '\u{1F606}',
+          '\u{1F60A}',
+        ]
+        let d = r && r.element,
+          n = d || document.body,
+          a = window.innerWidth,
+          u = window.innerHeight
+        const s = { x: a / 2, y: a / 2 },
+          m = { x: a / 2, y: a / 2 }
+        let x = 0
+        const l = [],
+          f = []
+        let e, h, y
+        const v = window.matchMedia('(prefers-reduced-motion: reduce)')
+        v.onchange = () => {
+          v.matches ? B() : E()
+        }
+        function E() {
+          if (v.matches)
+            return (
+              console.log(
+                'This browser has prefers reduced motion turned on, so the cursor did not init'
+              ),
+              !1
+            )
+          ;(e = document.createElement('canvas')),
+            (h = e.getContext('2d')),
+            (e.style.zIndex = 500),
+            (e.style.top = '0px'),
+            (e.style.left = '0px'),
+            (e.style.pointerEvents = 'none'),
+            d
+              ? ((e.style.position = 'absolute'),
+                n.appendChild(e),
+                (e.width = n.clientWidth),
+                (e.height = n.clientHeight))
+              : ((e.style.position = 'fixed'),
+                document.body.appendChild(e),
+                (e.width = a),
+                (e.height = u)),
+            (h.font = '21px serif'),
+            (h.textBaseline = 'middle'),
+            (h.textAlign = 'center'),
+            w.forEach((t) => {
+              let i = h.measureText(t),
+                o = document.createElement('canvas'),
+                c = o.getContext('2d')
+              ;(o.width = i.width),
+                (o.height = i.actualBoundingBoxAscent * 2),
+                (c.textAlign = 'center'),
+                (c.font = '21px serif'),
+                (c.textBaseline = 'middle'),
+                c.fillText(t, o.width / 2, i.actualBoundingBoxAscent),
+                f.push(o)
+            }),
+            S(),
+            b()
+        }
+        function S() {
+          n.addEventListener('mousemove', F, { passive: !0 }),
+            n.addEventListener('touchmove', p, { passive: !0 }),
+            n.addEventListener('touchstart', p, { passive: !0 }),
+            window.addEventListener('resize', M)
+        }
+        function M(t) {
+          ;(a = window.innerWidth),
+            (u = window.innerHeight),
+            d
+              ? ((e.width = n.clientWidth), (e.height = n.clientHeight))
+              : ((e.width = a), (e.height = u))
+        }
+        function p(t) {
+          if (t.touches.length > 0)
+            for (let i = 0; i < t.touches.length; i++)
+              L(
+                t.touches[i].clientX,
+                t.touches[i].clientY,
+                f[Math.floor(Math.random() * f.length)]
+              )
+        }
+        function F(t) {
+          t.timeStamp - x < 16 ||
+            window.requestAnimationFrame(() => {
+              if (d) {
+                const o = n.getBoundingClientRect()
+                ;(s.x = t.clientX - o.left), (s.y = t.clientY - o.top)
+              } else (s.x = t.clientX), (s.y = t.clientY)
+              Math.hypot(s.x - m.x, s.y - m.y) > 1 &&
+                (L(s.x, s.y, f[Math.floor(Math.random() * w.length)]),
+                (m.x = s.x),
+                (m.y = s.y),
+                (x = t.timeStamp))
+            })
+        }
+        function L(t, i, o) {
+          l.push(new A(t, i, o))
+        }
+        function C() {
+          h.clearRect(0, 0, a, u)
+          for (let t = 0; t < l.length; t++) l[t].update(h)
+          for (let t = l.length - 1; t >= 0; t--)
+            l[t].lifeSpan < 0 && l.splice(t, 1)
+        }
+        function b() {
+          C(), (y = requestAnimationFrame(b))
+        }
+        function B() {
+          e.remove(),
+            cancelAnimationFrame(y),
+            n.removeEventListener('mousemove', F),
+            n.removeEventListener('touchmove', p),
+            n.removeEventListener('touchstart', p),
+            window.addEventListener('resize', M)
+        }
+        function A(t, i, o) {
+          const c = Math.floor(Math.random() * 60 + 80)
+          ;(this.initialLifeSpan = c),
+            (this.lifeSpan = c),
+            (this.velocity = {
+              x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
+              y: Math.random() * 0.4 + 0.8,
+            }),
+            (this.position = { x: t, y: i }),
+            (this.canv = o),
+            (this.update = function (P) {
+              ;(this.position.x += this.velocity.x),
+                (this.position.y += this.velocity.y),
+                this.lifeSpan--,
+                (this.velocity.y += 0.05)
+              const g = Math.max(this.lifeSpan / this.initialLifeSpan, 0)
+              P.drawImage(
+                this.canv,
+                this.position.x - (this.canv.width / 2) * g,
+                this.position.y - this.canv.height / 2,
+                this.canv.width * g,
+                this.canv.height * g
+              )
+            })
+        }
+        return E(), { destroy: B }
+      }
+      new W({
+        emoji: [
+          '\u{1F381}',
+          '\u{1F384}',
+          '\u{1F31F}',
+          '\u2744\uFE0F',
+          '\u2603\uFE0F',
+        ],
+      })
+    </script>
+  </head>
   <body>
-    <div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div>
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><main class="astro-UIMZNNDV">
-    <div class="text-container astro-UIMZNNDV">
-      <h1 class="header astro-UIMZNNDV">
-        Wesołych Świąt 🎄<br class="astro-UIMZNNDV">
-        i Szczęśliwego Nowego Roku 🎊<br class="astro-UIMZNNDV">
-        dla wszystkich<br class="astro-UIMZNNDV">
-        <astro-island uid="ZFxSg9" data-solid-render-id="s0" component-url="/euvic-christmas-card/Role.aaf0916a.js" component-export="default" renderer-url="/euvic-christmas-card/client.6eb6b83a.js" props="{&quot;class&quot;:[0,&quot;astro-UIMZNNDV&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Role&quot;,&quot;value&quot;:true}" await-children=""><span data-hk="s00-0" style="color:hsl(314.7773580645146, 100%, 75%)">DevOpsów</span></astro-island>
-      </h1>
-    </div>
-    <div class="tree-container astro-UIMZNNDV">
-      <div class="tree astro-BDBEUSIY">
-  <div class="branches astro-BDBEUSIY" style="--i:0">
-        <span style="--j:0" class="astro-BDBEUSIY"></span><span style="--j:1" class="astro-BDBEUSIY"></span><span style="--j:2" class="astro-BDBEUSIY"></span><span style="--j:3" class="astro-BDBEUSIY"></span>
-      </div><div class="branches astro-BDBEUSIY" style="--i:1">
-        <span style="--j:0" class="astro-BDBEUSIY"></span><span style="--j:1" class="astro-BDBEUSIY"></span><span style="--j:2" class="astro-BDBEUSIY"></span><span style="--j:3" class="astro-BDBEUSIY"></span>
-      </div><div class="branches astro-BDBEUSIY" style="--i:2">
-        <span style="--j:0" class="astro-BDBEUSIY"></span><span style="--j:1" class="astro-BDBEUSIY"></span><span style="--j:2" class="astro-BDBEUSIY"></span><span style="--j:3" class="astro-BDBEUSIY"></span>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <style>
+      astro-island,
+      astro-slot {
+        display: contents;
+      }
+    </style>
+    <script>
+      ;((self.Astro = self.Astro || {}).load = (a) => {
+        ;(async () => await (await a())())()
+      }),
+        window.dispatchEvent(new Event('astro:load'))
+      var l
+      {
+        const c = {
+            0: (t) => t,
+            1: (t) => JSON.parse(t, o),
+            2: (t) => new RegExp(t),
+            3: (t) => new Date(t),
+            4: (t) => new Map(JSON.parse(t, o)),
+            5: (t) => new Set(JSON.parse(t, o)),
+            6: (t) => BigInt(t),
+            7: (t) => new URL(t),
+            8: (t) => new Uint8Array(JSON.parse(t)),
+            9: (t) => new Uint16Array(JSON.parse(t)),
+            10: (t) => new Uint32Array(JSON.parse(t)),
+          },
+          o = (t, s) => {
+            if (t === '' || !Array.isArray(s)) return s
+            const [e, n] = s
+            return e in c ? c[e](n) : void 0
+          }
+        customElements.get('astro-island') ||
+          customElements.define(
+            'astro-island',
+            ((l = class extends HTMLElement {
+              constructor() {
+                super(...arguments)
+                this.hydrate = () => {
+                  if (
+                    !this.hydrator ||
+                    (this.parentElement &&
+                      this.parentElement.closest('astro-island[ssr]'))
+                  )
+                    return
+                  const s = this.querySelectorAll('astro-slot'),
+                    e = {},
+                    n = this.querySelectorAll('template[data-astro-template]')
+                  for (const r of n) {
+                    const i = r.closest(this.tagName)
+                    !i ||
+                      !i.isSameNode(this) ||
+                      ((e[r.getAttribute('data-astro-template') || 'default'] =
+                        r.innerHTML),
+                      r.remove())
+                  }
+                  for (const r of s) {
+                    const i = r.closest(this.tagName)
+                    !i ||
+                      !i.isSameNode(this) ||
+                      (e[r.getAttribute('name') || 'default'] = r.innerHTML)
+                  }
+                  const a = this.hasAttribute('props')
+                    ? JSON.parse(this.getAttribute('props'), o)
+                    : {}
+                  this.hydrator(this)(this.Component, a, e, {
+                    client: this.getAttribute('client'),
+                  }),
+                    this.removeAttribute('ssr'),
+                    window.removeEventListener('astro:hydrate', this.hydrate),
+                    window.dispatchEvent(new CustomEvent('astro:hydrate'))
+                }
+              }
+              connectedCallback() {
+                !this.hasAttribute('await-children') || this.firstChild
+                  ? this.childrenConnectedCallback()
+                  : new MutationObserver((s, e) => {
+                      e.disconnect(), this.childrenConnectedCallback()
+                    }).observe(this, { childList: !0 })
+              }
+              async childrenConnectedCallback() {
+                window.addEventListener('astro:hydrate', this.hydrate)
+                let s = this.getAttribute('before-hydration-url')
+                s && (await import(s)), this.start()
+              }
+              start() {
+                const s = JSON.parse(this.getAttribute('opts')),
+                  e = this.getAttribute('client')
+                if (Astro[e] === void 0) {
+                  window.addEventListener(`astro:${e}`, () => this.start(), {
+                    once: !0,
+                  })
+                  return
+                }
+                Astro[e](
+                  async () => {
+                    const n = this.getAttribute('renderer-url'),
+                      [a, { default: r }] = await Promise.all([
+                        import(this.getAttribute('component-url')),
+                        n ? import(n) : () => () => {},
+                      ]),
+                      i = this.getAttribute('component-export') || 'default'
+                    if (!i.includes('.')) this.Component = a[i]
+                    else {
+                      this.Component = a
+                      for (const d of i.split('.'))
+                        this.Component = this.Component[d]
+                    }
+                    return (this.hydrator = r), this.hydrate
+                  },
+                  s,
+                  this
+                )
+              }
+              attributeChangedCallback() {
+                this.hydrator && this.hydrate()
+              }
+            }),
+            (l.observedAttributes = ['props']),
+            l)
+          )
+      }
+    </script>
+    <main class="astro-UIMZNNDV">
+      <div class="text-container astro-UIMZNNDV">
+        <h1 class="header astro-UIMZNNDV">
+          Wesołych Świąt 🎄<br class="astro-UIMZNNDV" />
+          i Szczęśliwego Nowego Roku 🎊<br class="astro-UIMZNNDV" />
+          dla wszystkich<br class="astro-UIMZNNDV" />
+          <astro-island
+            uid="ZFxSg9"
+            data-solid-render-id="s0"
+            component-url="/euvic-christmas-card/Role.aaf0916a.js"
+            component-export="default"
+            renderer-url="/euvic-christmas-card/client.6eb6b83a.js"
+            props='{"class":[0,"astro-UIMZNNDV"]}'
+            ssr=""
+            client="load"
+            opts='{"name":"Role","value":true}'
+            await-children=""
+            ><span
+              data-hk="s00-0"
+              style="color: hsl(314.7773580645146, 100%, 75%)"
+              >DevOpsów</span
+            ></astro-island
+          >
+        </h1>
       </div>
-  <div class="trunk astro-BDBEUSIY">
-    <span style="--i:0" class="astro-BDBEUSIY"></span><span style="--i:1" class="astro-BDBEUSIY"></span><span style="--i:2" class="astro-BDBEUSIY"></span><span style="--i:3" class="astro-BDBEUSIY"></span>
-  </div>
-  <div class="shadow astro-BDBEUSIY"></div>
-</div>
-
-
+      <div class="tree-container astro-UIMZNNDV">
+        <div class="tree astro-BDBEUSIY">
+          <div class="branches astro-BDBEUSIY" style="--i: 0">
+            <span style="--j: 0" class="astro-BDBEUSIY"></span
+            ><span style="--j: 1" class="astro-BDBEUSIY"></span
+            ><span style="--j: 2" class="astro-BDBEUSIY"></span
+            ><span style="--j: 3" class="astro-BDBEUSIY"></span>
+          </div>
+          <div class="branches astro-BDBEUSIY" style="--i: 1">
+            <span style="--j: 0" class="astro-BDBEUSIY"></span
+            ><span style="--j: 1" class="astro-BDBEUSIY"></span
+            ><span style="--j: 2" class="astro-BDBEUSIY"></span
+            ><span style="--j: 3" class="astro-BDBEUSIY"></span>
+          </div>
+          <div class="branches astro-BDBEUSIY" style="--i: 2">
+            <span style="--j: 0" class="astro-BDBEUSIY"></span
+            ><span style="--j: 1" class="astro-BDBEUSIY"></span
+            ><span style="--j: 2" class="astro-BDBEUSIY"></span
+            ><span style="--j: 3" class="astro-BDBEUSIY"></span>
+          </div>
+          <div class="trunk astro-BDBEUSIY">
+            <span style="--i: 0" class="astro-BDBEUSIY"></span
+            ><span style="--i: 1" class="astro-BDBEUSIY"></span
+            ><span style="--i: 2" class="astro-BDBEUSIY"></span
+            ><span style="--i: 3" class="astro-BDBEUSIY"></span>
+          </div>
+          <div class="shadow astro-BDBEUSIY"></div>
+        </div>
+      </div>
+      <div class="vignette astro-UIMZNNDV"></div>
+    </main>
+    <div class="audio-container astro-UIMZNNDV">
+      <audio
+        src="/euvic-christmas-card/song.mp3"
+        controls
+        autoplay
+        class="astro-UIMZNNDV"
+      ></audio>
     </div>
-    <div class="vignette astro-UIMZNNDV"></div>
-  </main><div class="audio-container astro-UIMZNNDV">
-    <audio src="/euvic-christmas-card/song.mp3" controls autoplay class="astro-UIMZNNDV"></audio>
-  </div>
-  
-
-
-</body></html>
-
+  </body>
+</html>
